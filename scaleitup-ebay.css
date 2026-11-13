@@ -384,7 +384,7 @@
     text-transform: uppercase;
     color: var(--su-muted);
   }
-  .su-lede { max-width: 860px; margin: 22px 0 0 !important; font-size: 18px; line-height: 1.6; color: var(--su-ink-80); }
+  .su-lede { max-width: 860px; margin: 40px 0 0; font-size: 18px; line-height: 1.6; color: var(--su-ink-80); }
   .su-lede:empty { display: none; }
   .su-lede p { margin: 0 0 12px; }
   .su-lede p:last-child { margin-bottom: 0; }
@@ -411,6 +411,7 @@
   .su-cols > div:not(:has(li:not(:empty))) { display: none; }
 
   /* spec sheet */
+  .su-spec-block { margin-top: 40px; }
   .su-specs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 32px; }
   .su-spec {
     display: flex;
