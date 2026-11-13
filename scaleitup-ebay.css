@@ -332,6 +332,7 @@
   }
   .su-perk-s { font-size: 12px; color: var(--su-muted); line-height: 1.5; }
   .su-loc { display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid var(--su-line); font-size: 12px; color: var(--su-muted); }
+  .su-loc.su-hide { display: none; }
   .su-usa { flex: 0 0 24px; width: 24px; height: 13px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(19, 20, 22, .12); }
   /* "Made in USA" — bigger and bold on desktop/tablet; phones keep the small version above */
   @media (min-width: 721px) {
