@@ -383,8 +383,10 @@
     font-weight: 900;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--su-muted);
+    color: var(--su-blue);
   }
+  .su-kicker::before { content: "#"; }
+  .su-kicker:empty { display: none; }
   .su-lede { max-width: 860px; margin: 40px 0 0; font-size: 18px; line-height: 1.6; color: var(--su-ink-80); }
   .su-lede:not(:has(.su-lede-body:not(:empty))) { display: none; }
   .su-lede p { margin: 0 0 12px; }
