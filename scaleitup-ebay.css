@@ -28,11 +28,12 @@
   .su *, .su *::before, .su *::after { box-sizing: border-box; }
   .su img { display: block; max-width: 100%; height: auto; border: 0; }
   .su a { color: inherit; text-decoration: none; }
-  .su h1, .su h2, .su h3, .su p, .su ul, .su dl, .su dd { margin: 0; padding: 0; }
-  .su ul { list-style: none; }
+  /* :where() = zero specificity, so any single-class rule below overrides these resets */
+  :where(.su) :where(h1, h2, h3, p, ul, dl, dd) { margin: 0; padding: 0; }
+  :where(.su) :where(ul) { list-style: none; }
   .su-wrap { padding: 0 32px; }
   .su-head-font { font-family: var(--su-head); }
-  .su-mobile-summary { display: none !important; }   /* eBay mobile summary — read by eBay, hidden on the page */
+  .su-mobile-summary { display: none; }   /* eBay mobile summary — read by eBay, hidden on the page */
 
   /* ---------- top bar ---------- */
   .su-topbar {
@@ -83,7 +84,7 @@
     text-align: center;
     color: var(--su-ink);
   }
-  .su-btn:hover { background: var(--su-ink); color: var(--su-yellow) !important; }
+  .su-btn:hover { background: var(--su-ink); color: var(--su-yellow); }
   .su-btn-lg { padding: 13px 22px; font-size: 14px; }
 
   /* ---------- category nav ---------- */
@@ -263,7 +264,7 @@
     text-transform: uppercase;
   }
   .su-title {
-    margin: 14px 0 0 !important;
+    margin: 14px 0 0;
     font-family: var(--su-head);
     font-size: 36px;
     font-weight: 900;
@@ -391,8 +392,8 @@
   .su-lede ul, .su-lede ol { margin: 0 0 12px; padding-left: 22px; list-style: disc; }
   .su-lede ol { list-style: decimal; }
   .su-h3 {
-    padding-top: 14px;
-    margin-bottom: 14px !important;
+    padding-top: 40px;
+    margin-bottom: 14px;
     border-top: 2px solid var(--su-ink);
     font-family: var(--su-head);
     font-size: 13px;
@@ -443,7 +444,7 @@
   .su-banner span { font-size: 12px; color: rgba(255, 255, 255, .7); }
 
   /* ---------- pairs well with your rig ---------- */
-  .su-pairs-sub { margin-top: 4px !important; font-size: 14px; color: var(--su-muted); }
+  .su-pairs-sub { margin-top: 4px; font-size: 14px; color: var(--su-muted); }
 
   .su-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
   .su-card {
@@ -489,7 +490,7 @@
   .su-foot-cols { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 32px; }
   .su-footer .su-logo { color: #fff; font-size: 20px; }
   .su-footer .su-logo span { color: var(--su-yellow); }
-  .su-foot-blurb { max-width: 300px; margin: 16px 0 18px !important; font-size: 13px; line-height: 1.65; }
+  .su-foot-blurb { max-width: 300px; margin: 16px 0 18px; font-size: 13px; line-height: 1.65; }
   .su-foot-h, .su-foot-cta {
     font-family: var(--su-head);
     font-size: 12px;
@@ -502,7 +503,7 @@
   .su-foot-links a { display: block; padding: 4px 0; font-size: 13px; color: rgba(255, 255, 255, .7); }
   .su-foot-links a:hover { color: #fff; }
   .su-foot-disclaimer {
-    margin-top: 32px !important;
+    margin-top: 32px;
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, .12);
     border-bottom: 1px solid rgba(255, 255, 255, .12);
@@ -517,7 +518,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 12px;
-    margin-top: 16px !important;
+    margin-top: 16px;
     font-size: 11px;
     color: rgba(255, 255, 255, .5);
   }
