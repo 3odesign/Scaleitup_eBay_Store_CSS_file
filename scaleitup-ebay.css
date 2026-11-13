@@ -386,17 +386,7 @@
     text-transform: uppercase;
     color: var(--su-blue);
   }
-  .su-callout {
-    margin-top: 40px;
-    padding: 14px 16px;
-    border-left: 4px solid var(--su-blue);
-    border-radius: 8px;
-    background: var(--su-soft);
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--su-ink-80);
-  }
-  .su-callout:empty { display: none; }
+  .su-note.su-callout { margin-top: 40px; }
   .su-kicker::before { content: "UPC: "; }
   .su-kicker:empty { display: none; }
   .su-lede { max-width: 860px; margin: 40px 0 0; font-size: 18px; line-height: 1.6; color: var(--su-ink-80); }
