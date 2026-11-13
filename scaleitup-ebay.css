@@ -450,7 +450,7 @@
   /* ---------- pairs well with your rig ---------- */
   .su-pairs-sub { margin-top: 4px; font-size: 14px; color: var(--su-muted); }
 
-  .su-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+  .su-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
   .su-card {
     display: block;
     border: 1px solid var(--su-line);
