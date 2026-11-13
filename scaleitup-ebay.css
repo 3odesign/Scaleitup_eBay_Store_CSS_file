@@ -385,7 +385,7 @@
     color: var(--su-muted);
   }
   .su-lede { max-width: 860px; margin: 40px 0 0; font-size: 18px; line-height: 1.6; color: var(--su-ink-80); }
-  .su-lede:empty { display: none; }
+  .su-lede:not(:has(.su-lede-body:not(:empty))) { display: none; }
   .su-lede p { margin: 0 0 12px; }
   .su-lede p:last-child { margin-bottom: 0; }
   .su-lede ul, .su-lede ol { margin: 0 0 12px; padding-left: 22px; list-style: disc; }
